@@ -1,0 +1,14 @@
+
+h1 {color: black ;}
+
+.dados{font-size:large;
+        font-weight: bold;}
+
+.botao{font-weight: bold;
+border-bottom: black 12px;
+cursor: pointer;}
+
+input:hover,select:hover{border: 2px solid black;
+    background-color: darkgrey;}
+
+
