@@ -3,27 +3,54 @@
     <head>
         <meta charset="utf-8">
         <title></title>
+        <script type="text/javascript">
+        function validar(){
+           var nome = formulario.nome.value;
+           if (nome == ""){
+               alert('prenche o campo nome')
+           }
+           var sobrenome = formulario.sobrenome.value;
+           if (nome == ""){
+            alert('Prenche o campo sobrenome')
+
+           }
+           var password = formulario.password.value;
+           if (password.length < 11){
+               alert('O password deve conter pelomenos 11 caracteres')
+           }
+
+           
+        }
+        
+        
+        </script>
+        <link rel="stylesheet" type="text/css" href="FormCss.css">
+      
+       
         <body>
-            <h1>Meu Formulario</h1>
-            <form action="" method="POST" enctype="multipart/form-data">
+            <h1>Prenche os seus dados pessoais </h1>
+            <form action="" name="formulario" method="POST" enctype="multipart/form-data" >
                 <div>
-                    <label for="">Nome</label>
+                    <label for="" class="dados">Nome:</label><br>
                     <input type="text" name="nome" required="required" placeholder="Digite seu nome">
                 </div>
+                <br>
                 <div>
-                    <label for="">Sobrenome</label>
+                    <label for="" class="dados">Sobrenome:</label><br>
                     <input type="text" name="sobrenome" required="required" placeholder="Digite seu sobrenome">
                 </div>
+                <br>
         
                 <div>
-                    <label for="">E-mail</label>
-                    <input type="text" name="e-mail" required="required" placeholder="Digite seu e-mail">
+                    <label for="" class="dados">E-mail:</label><br>
+                    <input type="text" name="e_mail" required="required" placeholder="Digite seu e-mail">
                 </div>
+                <br>
 
                 <div>
-                    <label for="">Seleciona a sua Ilha</label>
+                    <label for="" class="dados">Seleciona a sua Ilha:</label><br>
                     <select required="required" name="ilha">
-                    <option selected="selected" value="">Seleciona</option>
+                    <option selected="selected" value=""></option>
                     <option value="1">Santo Antao</option>
                     <option value="2">Sao Vicente</option>
                     <option value="3">Sao Nicolau</option>
@@ -35,26 +62,29 @@
                     <option value="9">Brava</option>
                     </select>
                 </div>
+                <br>
 
 
 
         
                 <div>
-                    <label for="">Password</label>
+                    <label for=""class="dados">Password:</label><br>
                     <input type="password" name="password" required="required" placeholder="Digite seu password">
-                </div>
-        
-                <div>
-                    <p>Seleciona o seu sexo:</p>
-                    <label for="">Masculino</label><input type="radio" name="sexo" required="required" value="m" >
-                    <label for="">Feminino</label><input type="radio" name="sexo" required="required" value="f">
-                    <label for="">Nenhum</label><input type="radio" name="sexo" required="required" value="m" >
                 </div>
                 <br>
         
-                <input type="reset" id="limpar_campos" value="Limpar">
+                <div>
+                    <p class="dados">Seleciona o seu sexo:</p>
+                    <label for="">Masculino</label><input type="radio" name="sexo" required="required" value="m" ><br>
+                    <label for="">Feminino</label><input type="radio" name="sexo" required="required" value="f"><br>
+                    <label for="">Nenhum</label><input type="radio" name="sexo" required="required" value="m" ><br>
+                </div>
+                <br>
+                <br>
         
-                <input type="submit" id="enviar_dados" value="Enviar">
+                <input type="reset" class="botao" id="limpar_campos" value="Limpar">
+        
+                <input type="submit" class="botao" id="enviar_dados" value="Enviar" onclick="return validar()">
         
         
             </form>
