@@ -6,17 +6,31 @@
         <script type="text/javascript">
         function validar(){
            var nome = formulario.nome.value;
-           if (nome == ""){
+           if (nome == "" || nome.indexOf ('') == -1){
                alert('prenche o campo nome')
+
+               formulario.nome.focus();
+               return false;
            }
            var sobrenome = formulario.sobrenome.value;
            if (nome == ""){
             alert('Prenche o campo sobrenome')
 
-           }
+            formulario.sobrenome.focus();
+            return false;
+         }
            var password = formulario.password.value;
-           if (password.length < 11){
-               alert('O password deve conter pelomenos 11 caracteres')
+           if (password.length <= 6){
+               alert('O password deve conter pelomenos 6 caracteres')
+               formulario.passwrod.focus();
+               return false;
+           }
+
+           var e_mail = formulario.e_mail.value;
+           if ( e_mail.indexOf ('@') == -1 || e_mail == ""){
+               alert('Digite o e-mail corretamente')
+               formulario.e_mail.focus();
+               return false;
            }
 
            
